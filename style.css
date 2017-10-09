@@ -1,11 +1,192 @@
 /*   
-Theme Name: templets
+Theme Name: NashiChuvstava Temp
 Theme URI: 
 Version: 1.0
-Description: Заготовка для шаблона.
+Description: Специальный шаблон для сайта Наши Чувства.
 Author: Dmitriy Kovalev
 Author URI: https://www.fl.ru/users/kacevnik/
 */
 
 /* css reset */
 a,hr{padding:0}a,button,input,select,textarea{margin:0}article,aside,details,figure,footer,header,hr,nav,section,summary{display:block}abbr,address,article,aside,audio,b,blockquote,body,body div,caption,cite,code,dd,del,details,dfn,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font-weight:400;vertical-align:baseline;background:0 0}input[type=checkbox],th{vertical-align:bottom}html{box-sizing:border-box;overflow-y:scroll}*,:after,:before{box-sizing:inherit}embed,img,object{max-width:100%}ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{font-size:100%;vertical-align:baseline;background:0 0}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help}th{font-weight:700}td{font-weight:400;vertical-align:top}hr{height:1px;border:0;border-top:1px solid #ccc;margin:1em 0}input,select{vertical-align:middle}pre{white-space:pre;white-space:pre-wrap;white-space:pre-line;word-wrap:break-word}input[type=radio]{vertical-align:text-bottom}.ie7 input[type=checkbox]{vertical-align:baseline}.ie6 input{vertical-align:text-bottom}input,select,textarea{font:99% sans-serif}table{border-collapse:collapse;border-spacing:0;font:100%}small{font-size:85%}strong{font-weight:700}td,td img{vertical-align:top}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-.5em}sub{bottom:-.25em}code,kbd,pre,samp{font-family:monospace,sans-serif}.clickable,button,input[type=button],input[type=file],input[type=submit],label{cursor:pointer}button,input[type=button]{width:auto;overflow:visible}.ie7 img{-ms-interpolation-mode:bicubic}.clearfix:after,.clearfix:before{content:"\0020";display:block;height:0;overflow:hidden}.clearfix:after{clear:both}.clearfix{zoom:1}
+
+	display:none; 
+}
+
+.alignnone {
+    margin: 15px 15px 15px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 15px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 15px 0 10px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 15px 20px 10px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 15px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 15px 0 10px 20px;
+}
+
+a img.alignnone {
+    margin: 15px 15px 15px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 15px 20px 10px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin: 15px auto;
+}
+
+.wp-caption {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 15px 15px 15px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 15px 20px 10px 0;
+}
+
+.wp-caption.alignright {
+    margin: 15px 0 10px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+	text-align: center;
+	color: #999;
+	font-style: italic;
+    font-size: 12px;
+    line-height: 17px;
+    margin: 0;
+    padding: 8px 0;
+}
+
+ul li a i { font-style: normal; }
+
+
+
+/* isotope transition styles */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+  
+#infscr-loading {
+	bottom: 18px;
+	font-style: normal;
+	font-weight: normal;
+	height: 60px;
+	left: 50%!important;
+	margin-left: -100px;
+	background-color:#FFF;
+	opacity:0.9;
+	padding-top: 10px;
+	position: fixed!important;
+	text-align: center;
+	z-index: 1000;
+	width: 200px;
+	-webkit-border-radius: 2px!important;
+	-moz-border-radius: 2px!important;
+	-khtml-border-radius: 2px!important;
+	-o-border-radius: 2px!important;
+	-ms-border-radius: 2px!important;
+	border-radius: 2px;
+}
+
+#infscr-loading img {
+	text-align:center;
+	display:block;
+	margin: 0 auto 10px auto;
+}
+#infscr-loading em {
+ font-size: 12px;
+}
+.sticky  {}
+.bypostauthor   {}
+.gallery-caption {}
+
+.left-sidebar .blog-post .post-content {
+	margin-right: 150px;
+	margin-left: 0px;
+}
+.left-sidebar .blog-post .post-meta {
+	text-align: left;
+	padding-right: 0px;
+	padding-left: 6px;
+	float: right;
+	min-width: 130px;
+	background-position: left 4px;
+}
+.df-layerslider {
+	width: 940px!important;
+	height: 400px!important;;
+}
+
+.df-left{
+	float:left!important;
+}
+.df-right{
+	float:right!important;
+}
+
+.post-pages {
+  padding: 0 20px 20px 20px;
+}
+
+.comments-pager {
+  padding: 0 20px 20px 20px;
+}
+
+#google-map {
+  margin-bottom: 30px;
+}
+
+
