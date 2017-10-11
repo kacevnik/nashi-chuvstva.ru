@@ -1,5 +1,14 @@
 jQuery(document).ready(function ($) {		
-	$('.section_3').css({'background-position-x': ($(window).width() - 1200)/2 -365 + 'px'});
+	function colorMenu(){
+		var color_menu = ['#D46026', '#8DC63F', '#00AEEF', '#FF9900', '#8E44AD', '#C0392B'];
+		var i = 0;
+		$('ul.primary-navigation .sub-menu li span').remove();
+		$('ul.primary-navigation li span').each(function(index, el) {
+			$(this).css({'background-color': color_menu[i]});
+			i++;
+		});
+	}
 
-	$('.footer_menu ul').css({'margin-left': ($('.footer_menu').width()-$('.footer_menu ul').width())/2+'px'});
+	colorMenu();
+
 });

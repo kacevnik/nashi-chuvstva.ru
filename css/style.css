@@ -2,12 +2,12 @@ body {
     color:#444;
     font-size: 14px;
     line-height: 1.45em;
-    margin: 0
+    margin: 0;
 }
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%;
 }
 *, *:before, *:after {
     -webkit-box-sizing: border-box;
@@ -832,7 +832,9 @@ ul.top-navigation ul li:last-child {
     margin-bottom: 20px
 }
 #header.center > #logo, #header.center > .top-banner-block {
-    float: none
+    float: left;
+    width: 20%;
+
 } 
 /* ==============================================================================   
         Logo
@@ -5099,4 +5101,8 @@ h2.user-nicename {
 .btn-without-icon {
     width: 88px !important;
     padding: 0 8px !important;
+}
+
+ul.primary-navigation .sub-menu li span{
+    display: none;
 }
