@@ -1,101 +1,99 @@
 
 <?php get_header(); ?>
+
+<?php
+    $args_category_list = array(
+        'type'         => 'post',
+        'child_of'     => '',
+        'parent'       => '',
+        'orderby'      => 'count',
+        'order'        => 'DESC',
+        'hide_empty'   => 1,
+        'hierarchical' => 1,
+        'exclude'      => '',
+        'include'      => '',
+        'number'       => 0,
+        'taxonomy'     => 'category',
+        'pad_counts'   => false,
+    );
+
+    $res_category_list =  array();
+
+    $category_list = get_categories( $args_category_list );
+
+?>
 <!-- Container -->
 <div class="container">
-		    <!-- Primary left -->
-	    <div id="primary-left">
-     
-
-    
- 
-        	    		
-<div class="clear"></div>
-
-<!-- Category block news -->
-<div class="category-block-news-1 clearfix">
-    <!-- Category title -->
-    <div class="category-title" style="background-color: #D46026">
-        <h3>Любовь</h3>
-                            <a href="" class="category-link"></a>
-            </div>
-                    <!-- Main post -->
-        <div class="main-post">
-            <div class="cont-img">
-                                <a href="">
-                    <img src="http://onmoy.com/wp-content/uploads/2015/04/devushka-priznaetsya-1244x500_c.jpg" alt="Как сказать парню, что я его люблю?" title="Как сказать парню, что я его люблю?" />                </a>
-            </div>
-                        <h2>
-                <a href="">Как сказать парню, что я его люблю?</a>
-            </h2>
-                        <p>Чувствуешь, что влюбилась? Отныне твоя жизнь разделяется на две части: ты и он. Каждую минуту труднее удержать в себе чувства, размышляешь над способом признания? Но всякий раз то смелости недостает, то все момент подходящий не наступает. Может, ничего парню не говорить, тихо страдать? От вопросов голова идет кругом, а ответы</p>
-             
-        </div>
+	<!-- Primary left -->
+	<div id="primary-left">
+        <div class="clear"></div>
+        <!-- Category block news -->
+            <?php
+                foreach ($category_list as $cat) {
+                if($cat->parent == 0){
+            ?>
+            <div class="category-block-news-1 clearfix">
+                <!-- Category title -->
+                <div class="category-title" style="background-color: #D46026">
+                    <h3><?php echo $cat->name; ?></h3>
+                    <a href="<?php echo get_category_link($cat->cat_ID); ?>" class="category-link"></a>
+                </div>
+                <?php
+                    $my_query = new WP_Query('cat='.$cat->cat_ID.'&posts_per_page=1');
+                    if($my_query->have_posts()){
+                        while ( $my_query->have_posts() ) : $my_query->the_post();
+                ?>
+                <!-- Main post -->
+                <div class="main-post link-more_none">
+                    <div class="cont-img">
+                        <a href="<?php echo get_permalink(); ?>">
+                            <?php the_post_thumbnail(); ?>
+                        </a>
+                    </div>
+                    <h2>
+                        <a href="<?php echo get_permalink(); ?>"><?php the_title(); // заголовок?></a>
+                    </h2>
+                    <?php the_content(); // контент ?>                         
+                </div>
+                <?php
+                        endwhile;
+                    }
+                ?>
      
     <!-- Block list news -->
     <ul class="block-news">
-                                <!-- Post -->
-            <li class="small-thumb-post">
-                <div class="cont-img">
-                    <a href="">
-                        <img src="http://onmoy.com/wp-content/uploads/2015/04/dobivaemsya-parnya-160x160_c.jpg" alt="Что делать, чтобы добиться парня?" title="Что делать, чтобы добиться парня?" />                    </a>
+        <?php
+            $my_query_2 = new WP_Query('cat='.$cat->cat_ID.'&posts_per_page=5&offset=1');
+            if($my_query_2->have_posts()){
+                while ( $my_query_2->have_posts() ) : $my_query_2->the_post();
+        ?>
+        <!-- Post -->
+        <li class="small-thumb-post">
+            <div class="cont-img">
+                <a href="<?php echo get_permalink(); ?>">
+                    <?php $size = array('80', '80'); ?>
+                    <?php the_post_thumbnail($size); ?>                    
+                </a>
+            </div>
+            <div class="description">
+                <div class="entry-meta">
+                    <span class="post-date"><?php echo get_the_date('F d, Y'); ?></span>
                 </div>
-                <div class="description">
-                    <div class="entry-meta">
-                        <span class="post-date">Апрель 23, 2015</span>
-                    </div>
-                    <h2>
-                        <a href="">Что делать, чтобы добиться парня?</a>
-                    </h2>
-                                    </div>
-            </li>
-                                <!-- Post -->
-            <li class="small-thumb-post">
-                <div class="cont-img">
-                    <a href="">
-                        <img src="http://onmoy.com/wp-content/uploads/2015/04/zainteresovat-muznchinu-9-160x160_c.jpg" alt="Все способы привлечь внимание любого мужчины!" title="Все способы привлечь внимание любого мужчины!" />                    </a>
-                </div>
-                <div class="description">
-                    <div class="entry-meta">
-                        <span class="post-date">Апрель 22, 2015</span>
-                    </div>
-                    <h2>
-                        <a href="">Все способы привлечь внимание любого мужчины!</a>
-                    </h2>
-                                    </div>
-            </li>
-                                <!-- Post -->
-            <li class="small-thumb-post">
-                <div class="cont-img">
-                    <a href="">
-                        <img src="http://onmoy.com/wp-content/uploads/2015/04/muzhchina-i-manipul-160x160_c.jpg" alt="Отношения с мужчиной &#8211; сборник ответов" title="Отношения с мужчиной &#8211; сборник ответов" />                    </a>
-                </div>
-                <div class="description">
-                    <div class="entry-meta">
-                        <span class="post-date">Апрель 21, 2015</span>
-                    </div>
-                    <h2>
-                        <a href="">Отношения с мужчиной &#8211; сборник ответов</a>
-                    </h2>
-                                    </div>
-            </li>
-                                <!-- Post -->
-            <li class="small-thumb-post">
-                <div class="cont-img">
-                    <a href="http://onmoy.com/kak-zastavit-parnya-delat-to-chto-ty-zahochesh.html">
-                        <img src="http://onmoy.com/wp-content/uploads/2015/04/zastav-parya-160x160_c.jpg" alt="Как заставить парня делать то, что ты захочешь?" title="Как заставить парня делать то, что ты захочешь?" />                    </a>
-                </div>
-                <div class="description">
-                    <div class="entry-meta">
-                        <span class="post-date">Апрель 20, 2015</span>
-                    </div>
-                    <h2>
-                        <a href="">Как заставить парня делать то, что ты захочешь?</a>
-                    </h2>
-                                    </div>
-            </li>
-                 
+                <h2>
+                    <a href="<?php echo get_permalink(); ?>"><?php the_title(); // заголовок?></a>
+                </h2>
+            </div>
+        </li>
+        <?php
+                endwhile;
+            }
+        ?>         
     </ul>                         
 </div>
+<?php
+    }
+}
+?>
 <div class="clear"></div>      
 </div>
 	   <!-- Sidebar -->

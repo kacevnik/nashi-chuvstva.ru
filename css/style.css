@@ -2570,6 +2570,7 @@ ul.social-icons li.rss a {
     position: absolute;
     pointer-events: none;
     border-width: 5px;
+    border-top-color: #222222;
 }
 .widget ul {
     list-style: none;
@@ -5104,5 +5105,9 @@ h2.user-nicename {
 }
 
 ul.primary-navigation .sub-menu li span{
+    display: none;
+}
+
+.link-more_none a.more-link{
     display: none;
 }

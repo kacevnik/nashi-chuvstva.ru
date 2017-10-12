@@ -13,10 +13,10 @@ register_sidebar(array(
 	'name' => 'Колонка слева', // Название сайдбара
 	'id' => "left-sidebar", // Идентификатор
 	'description' => 'Обычная колонка в сайдбаре',
-	'before_widget' => '<div id="%1$s" class="widget %2$s">', // До виджета
-	'after_widget' => "</div>\n", // После виджета
-	'before_title' => '<span class="widgettitle">', //  До заголовка виджета
-	'after_title' => "</span>\n", //  После заголовка виджета
+	'before_widget' => '<aside id="%1$s" class="widget %2$s">', // До виджета
+	'after_widget' => "</aside>\n", // После виджета
+	'before_title' => '<h3 class="widget-title">', //  До заголовка виджета
+	'after_title' => "</h3>\n", //  После заголовка виджета
 ));
 
 class clean_comments_constructor extends Walker_Comment { // класс, который собирает всю структуру комментов

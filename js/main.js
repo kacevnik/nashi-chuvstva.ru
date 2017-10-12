@@ -7,8 +7,18 @@ jQuery(document).ready(function ($) {
 			$(this).css({'background-color': color_menu[i]});
 			i++;
 		});
+	}	
+
+	function colorBackTitle(){
+		var color_menu = ['#D46026', '#8DC63F', '#00AEEF', '#FF9900', '#8E44AD', '#C0392B'];
+		var i = 0;
+		$('.category-title').each(function(index, el) {
+			$(this).css({'background-color': color_menu[i]});
+			i++;
+		});
 	}
 
 	colorMenu();
+	colorBackTitle();
 
 });
