@@ -5111,3 +5111,14 @@ ul.primary-navigation .sub-menu li span{
 .link-more_none a.more-link{
     display: none;
 }
+
+.custom_main_post img{
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 210px;
+    height: 120px;
+    border: 10px solid #fff;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(34, 34, 34, 0.1);
+-moz-box-shadow: 0px 0px 5px 1px rgba(34, 34, 34, 0.1);
+box-shadow: 0px 0px 5px 1px rgba(34, 34, 34, 0.1);
+}

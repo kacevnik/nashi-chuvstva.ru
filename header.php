@@ -18,7 +18,7 @@
             <!-- Header -->
             <header id="header" class="center container">
             	<div id="logo">
-				    <a href="<?php home_url(); ?>">
+				    <a href="<?php echo home_url(); ?>">
 						<img src="<?php if (defined('FW')){ echo fw_get_db_settings_option('kdv_logo')['url']; }?>" alt="<?php bloginfo('description'); ?>">
 					</a>  
 				</div>
