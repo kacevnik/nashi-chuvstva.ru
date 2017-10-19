@@ -47,13 +47,13 @@
                 <div class="main-post link-more_none">
                     <div class="cont-img">
                         <a href="<?php echo get_permalink(); ?>">
-                            <?php the_post_thumbnail(); ?>
+                            <?php the_post_thumbnail('full'); ?>
                         </a>
                     </div>
                     <h2>
                         <a href="<?php echo get_permalink(); ?>"><?php the_title(); // заголовок?></a>
                     </h2>
-                    <?php the_content(); // контент ?>                         
+                    <?php the_excerpt(); ?>                         
                 </div>
                 <?php
                         endwhile;

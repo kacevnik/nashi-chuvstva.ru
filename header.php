@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<meta name="yandex-verification" content="9c658afc0262ca6e" />
 		<title><?php wp_title('/'); ?></title>
 		<link rel="alternate" type="application/rdf+xml" title="RDF mapping" href="<?php bloginfo('rdf_url'); ?>">
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss_url'); ?>">
@@ -11,7 +12,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<!-- BEGIN body -->
-	<body <?php body_class(); ?>>			
+	<body <?php body_class(); ?> id="back-top">			
 		<!-- Main wrapper -->
         <div id="wrapper" class="boxed">
         	<div style="padding-top: 20px;"></div>            
